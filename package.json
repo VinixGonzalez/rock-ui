@@ -38,6 +38,10 @@
   "module": "dist/rockr-ui.esm.js",
   "devDependencies": {
     "@babel/core": "^7.11.0",
+    "@chakra-ui/core": "1.0.0-rc.0",
+    "@chakra-ui/icons": "^1.0.0-next.3",
+    "@chakra-ui/theme": "^1.0.0-rc.0",
+    "@chakra-ui/theme-tools": "^1.0.0-rc.0",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-info": "^5.3.19",
