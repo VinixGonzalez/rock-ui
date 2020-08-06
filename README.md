@@ -2,6 +2,43 @@
 
 Rock Content Design System component kit in React
 
+## Using Rockr UI in a react project
+
+Install the kit package in your react project
+
+```
+yarn add @rockr-ui
+```
+
+In your entry file (e.g `app.tsx`) use the theme provider
+
+```typescript
+# app.tsx
+
+import * as React from "react"
+import { ThemeProvider, CSSReset, RockrTheme } from "@rockr-ui"
+
+// Use at the root of your app
+function App() {
+  return (
+    <ThemeProvider theme={RockrTheme}>
+      <CSSReset />
+      <App />
+    </ThemeProvider>
+  )
+}
+```
+
+Use any component from the library
+
+```typescript
+# MyComponent.tsx
+import React from 'react'
+import { Button } from '@rockr-ui'
+
+const MyComponent = () => <Button colorScheme="blue">Foobar</Button>
+```
+
 ## Development
 
 ```
