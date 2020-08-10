@@ -1,5 +1,5 @@
 {
-  "name": "rock-io",
+  "name": "rock-ui",
   "author": "Rock Content",
   "version": "0.1.0",
   "license": "MIT",
@@ -35,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "module": "dist/rock-io.esm.js",
+  "module": "dist/rock-ui.esm.js",
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@chakra-ui/core": "1.0.0-rc.0",
