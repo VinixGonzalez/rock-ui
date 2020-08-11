@@ -1,3 +1,3 @@
 import theme from '@chakra-ui/theme';
 
-export { theme };
+export { theme as RockUITheme };

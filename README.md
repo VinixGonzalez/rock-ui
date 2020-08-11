@@ -7,7 +7,11 @@ Rock Content Design System component kit in React
 Install the kit package in your react project
 
 ```
-yarn add @rock-ui
+yarn add @rockr/rock-ui
+```
+or, with npm:
+```
+npm i -S @rockr/rock-ui
 ```
 
 In your entry file (e.g `app.tsx`) use the theme provider
@@ -16,12 +20,12 @@ In your entry file (e.g `app.tsx`) use the theme provider
 # app.tsx
 
 import * as React from "react"
-import { ThemeProvider, CSSReset, RockrTheme } from "@rock-ui"
+import { ThemeProvider, CSSReset, RockUITheme } from "@rockr/rock-ui"
 
 // Use at the root of your app
 function App() {
   return (
-    <ThemeProvider theme={RockrTheme}>
+    <ThemeProvider theme={RockUITheme}>
       <CSSReset />
       <App />
     </ThemeProvider>
@@ -34,7 +38,7 @@ Use any component from the library
 ```typescript
 # MyComponent.tsx
 import React from 'react'
-import { Button } from '@rock-ui'
+import { Button } from '@rockr/rock-ui'
 
 const MyComponent = () => <Button colorScheme="blue">Foobar</Button>
 ```

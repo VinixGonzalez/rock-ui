@@ -3,5 +3,5 @@ export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
-  theme,
+  RockUITheme,
 } from './system/theme';
