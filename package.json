@@ -72,5 +72,8 @@
   "bugs": {
     "url": "https://github.com/rockcontent/rock-ui/issues"
   },
-  "homepage": "https://github.com/rockcontent/rock-ui#readme"
+  "homepage": "https://github.com/rockcontent/rock-ui#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
