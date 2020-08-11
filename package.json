@@ -1,7 +1,7 @@
 {
-  "name": "rock-ui",
+  "name": "@rockr/rock-ui",
   "author": "Rock Content",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -38,10 +38,6 @@
   "module": "dist/rock-ui.esm.js",
   "devDependencies": {
     "@babel/core": "^7.11.0",
-    "@chakra-ui/core": "1.0.0-rc.0",
-    "@chakra-ui/icons": "^1.0.0-next.3",
-    "@chakra-ui/theme": "^1.0.0-rc.0",
-    "@chakra-ui/theme-tools": "^1.0.0-rc.0",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-info": "^5.3.19",
@@ -52,13 +48,29 @@
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
     "husky": "^4.2.5",
-    "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
-    "react-dom": "^16.13.1",
-    "react-is": "^16.13.1",
     "ts-loader": "^8.0.1",
     "tsdx": "^0.13.2",
     "tslib": "^2.0.0",
-    "typescript": "^3.9.7"
-  }
+    "typescript": "^3.9.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1"
+  },
+  "description": "Rock Content Design System component kit in React",
+  "dependencies": {
+    "@chakra-ui/core": "^1.0.0-rc.2",
+    "@chakra-ui/icons": "^1.0.0-next.3",
+    "@chakra-ui/system": "^1.0.0-rc.1",
+    "@chakra-ui/theme": "^1.0.0-rc.0",
+    "@chakra-ui/theme-tools": "^1.0.0-rc.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rockcontent/rock-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rockcontent/rock-ui/issues"
+  },
+  "homepage": "https://github.com/rockcontent/rock-ui#readme"
 }
