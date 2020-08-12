@@ -4,7 +4,7 @@ export {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-} from './components/Alert';
+} from './components/alert';
 export {
   ThemeProvider,
   ThemeProviderProps,
