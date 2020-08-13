@@ -7,6 +7,12 @@ export {
   AlertDescription,
 } from './components/alert';
 export {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from './components/breadcrumb';
+export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
