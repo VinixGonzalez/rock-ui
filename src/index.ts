@@ -13,6 +13,16 @@ export {
   BreadcrumbSeparator,
 } from './components/breadcrumb';
 export {
+  Menu,
+  MenuButton,
+  MenuDivider,
+  MenuGroup,
+  MenuItem,
+  MenuItemOption,
+  MenuList,
+  MenuOptionGroup,
+} from './components/menu';
+export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
