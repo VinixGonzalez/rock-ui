@@ -1,8 +1,9 @@
 import { Container } from '@chakra-ui/layout';
 import * as React from 'react';
-import { Avatar, AvatarBadge } from '../';
-import { QuestionIcon, StarIcon } from '@chakra-ui/icons';
+import { QuestionIcon } from '@chakra-ui/icons';
+import { BadgeIcon } from '../../../icons/badge';
 import { Stack } from '../../stack';
+import { Avatar, AvatarBadge } from '../';
 
 export default {
   title: 'Avatar',
@@ -31,7 +32,10 @@ export const withBadge = () => (
       </Avatar>
 
       <Avatar src={'https://bit.ly/2DU7Ngr'}>
-        <AvatarBadge boxSize="1.25em" bg="blue.500" icon={<StarIcon />} />
+        <AvatarBadge
+          border="none"
+          icon={<BadgeIcon fill={'#326ee2'} boxSize={'1.3em'} />}
+        />
       </Avatar>
     </Stack>
   </>
