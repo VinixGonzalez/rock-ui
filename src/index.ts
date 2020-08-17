@@ -32,6 +32,7 @@ export {
   ModalCloseButton,
 } from './components/modal';
 export { useDisclosure } from '@chakra-ui/core';
+export { Tooltip } from './components/tooltip';
 export {
   ThemeProvider,
   ThemeProviderProps,
