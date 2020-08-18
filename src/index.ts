@@ -1,4 +1,4 @@
-export { Avatar, AvatarBadge } from './components/avatar';
+export { Avatar, AvatarBadge, AvatarGroup } from './components/avatar';
 export { Badge } from './components/badge';
 export { Button } from './components/button';
 export {
