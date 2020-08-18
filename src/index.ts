@@ -41,6 +41,13 @@ export {
   InputRightElement,
 } from './components/input';
 export {
+  NumberInput,
+  NumberDecrementStepper,
+  NumberInputStepper,
+  NumberInputField,
+  NumberIncrementStepper,
+} from './components/number-input';
+export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
