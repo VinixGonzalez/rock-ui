@@ -22,6 +22,7 @@ export {
   MenuList,
   MenuOptionGroup,
 } from './components/menu';
+export { Progress } from './components/progress';
 export {
   Modal,
   ModalOverlay,
