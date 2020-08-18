@@ -23,6 +23,17 @@ export {
   MenuList,
   MenuOptionGroup,
 } from './components/menu';
+export { Progress } from './components/progress';
+export {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from './components/modal';
+export { useDisclosure } from '@chakra-ui/core';
 export {
   ThemeProvider,
   ThemeProviderProps,
