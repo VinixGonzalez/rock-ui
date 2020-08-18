@@ -33,6 +33,14 @@ export {
 } from './components/modal';
 export { useDisclosure } from '@chakra-ui/core';
 export {
+  Input,
+  InputGroup,
+  InputLeftAddon,
+  InputLeftElement,
+  InputRightAddon,
+  InputRightElement,
+} from './components/input';
+export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
