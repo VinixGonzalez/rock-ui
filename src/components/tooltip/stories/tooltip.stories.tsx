@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Container, HStack, Stack } from '@chakra-ui/layout';
 import { PhoneIcon, SearchIcon } from '@chakra-ui/icons';
 import { Button } from '../../button';
-import { Tooltip } from '../index';
+import { Tooltip } from '../';
 
 export default {
   title: 'Tooltip',
