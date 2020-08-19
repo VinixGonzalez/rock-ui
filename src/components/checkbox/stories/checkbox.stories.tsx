@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Container, Stack, HStack } from '@chakra-ui/layout';
-import { Checkbox } from '@chakra-ui/core';
-import { CheckboxGroup } from '../';
+import { Checkbox, CheckboxGroup } from '../';
 
 export default {
   title: 'Checkbox',
@@ -15,12 +14,7 @@ export default {
 };
 
 export const basic = () => (
-  <Checkbox
-    defaultIsChecked
-    onChange={() => console.log('onChange')}
-    onFocus={() => console.log('onFocus')}
-    onBlur={() => console.log('onBlur')}
-  >
+  <Checkbox defaultIsChecked style={{ borderColor: 'rgb(226, 232, 240)' }}>
     Checkbox
   </Checkbox>
 );
