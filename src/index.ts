@@ -33,6 +33,7 @@ export {
   ModalBody,
   ModalCloseButton,
 } from './components/modal';
+export { Checkbox, CheckboxGroup } from './components/checkbox';
 export { useDisclosure } from '@chakra-ui/core';
 export {
   ThemeProvider,
