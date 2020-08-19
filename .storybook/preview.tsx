@@ -7,7 +7,7 @@ import * as React from 'react';
 const withChakra = (StoryFn: Function) => (
   <ThemeProvider theme={theme}>
     <CSSReset />
-    <div id="story-wrapper" style={{ minHeight: '100vh', backgroundColor: '#F3F3F3' }}>
+    <div id="story-wrapper" style={{ minHeight: '100vh' }}>
       <StoryFn />
     </div>
   </ThemeProvider>
