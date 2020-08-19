@@ -35,6 +35,23 @@ export {
 } from './components/modal';
 export { useDisclosure } from '@chakra-ui/core';
 export {
+  AspectRatio,
+  Box,
+  Center,
+  Circle,
+  Container,
+  Flex,
+  Grid,
+  HStack,
+  SimpleGrid,
+  Spacer,
+  Square,
+  Stack,
+  StackDivider,
+  VStack,
+  Wrap,
+} from './components/layout';
+export {
   Input,
   InputGroup,
   InputLeftAddon,
