@@ -1,45 +1,55 @@
 import React from 'react';
-import * as ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-dom/test-utils';
+import '@testing-library/jest-dom';
+import { render, fireEvent } from '@testing-library/react';
 import { CheckIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputRightElement, InputLeftElement } from '../';
 
 describe('Input', () => {
   it('renders without crashing', () => {
-    // setup a DOM element as a render target
-    const container = document.createElement('div');
-    // container *must* be attached to document so events work correctly.
-    document.body.appendChild(container);
     const component = (
       <InputGroup>
         <InputLeftElement color="gray.300" fontSize="1.2em" children="$" />
-        <Input placeholder="Enter amount" padding="0 40px" />
+        <Input
+          placeholder="Enter amount"
+          padding="0 40px"
+          data-testid="test-input"
+        />
         <InputRightElement children={<CheckIcon color="green.500" />} />
       </InputGroup>
     );
 
-    ReactTestUtils.act(() => {
-      ReactDOM.render(component, container);
-    });
+    const { getByTestId, unmount } = render(component);
 
-    const inputGroup = document.querySelector('.chakra-input__group');
-    const inputLeftElement = document.querySelector(
-      '.chakra-input__left-element'
-    );
-    const inputElement = document.querySelector('.chakra-input');
-    const inputRightElement = document.querySelector(
-      '.chakra-input__right-element'
-    );
+    const inputElement = getByTestId('test-input');
 
-    expect(inputGroup).toBeTruthy();
-    expect(inputLeftElement).toBeTruthy();
-    expect(inputElement).toBeTruthy();
-    expect(inputRightElement).toBeTruthy();
+    expect(inputElement).toBeInTheDocument();
 
-    ReactDOM.unmountComponentAtNode(container);
-    container.remove();
+    unmount();
   });
   it('call the callback functions', () => {
-    // setup after the testing library is merged
+    const handleChange = jest.fn();
+    const component = (
+      <InputGroup>
+        <InputLeftElement color="gray.300" fontSize="1.2em" children="$" />
+        <Input
+          placeholder="Enter amount"
+          padding="0 40px"
+          data-testid="test-input"
+          onChange={handleChange}
+        />
+        <InputRightElement children={<CheckIcon color="green.500" />} />
+      </InputGroup>
+    );
+
+    const { getByTestId, unmount } = render(component);
+
+    const inputElement = getByTestId('test-input') as HTMLInputElement;
+
+    fireEvent.change(inputElement, { target: { value: 'test' } });
+
+    expect(handleChange).toBeCalledTimes(1);
+    expect(inputElement.value).toBe('test');
+
+    unmount();
   });
 });

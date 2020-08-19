@@ -1,6 +1,6 @@
 import React from 'react';
-import * as ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-dom/test-utils';
+import '@testing-library/jest-dom';
+import { render, fireEvent } from '@testing-library/react';
 import {
   NumberInput,
   NumberInputField,
@@ -11,13 +11,9 @@ import {
 
 describe('Number Input', () => {
   it('renders without crashing', () => {
-    // setup a DOM element as a render target
-    const container = document.createElement('div');
-    // container *must* be attached to document so events work correctly.
-    document.body.appendChild(container);
     const component = (
       <NumberInput>
-        <NumberInputField />
+        <NumberInputField data-testid="test-input" />
         <NumberInputStepper>
           <NumberIncrementStepper />
           <NumberDecrementStepper />
@@ -25,20 +21,35 @@ describe('Number Input', () => {
       </NumberInput>
     );
 
-    ReactTestUtils.act(() => {
-      ReactDOM.render(component, container);
-    });
+    const { getByTestId, unmount } = render(component);
 
-    const inputElement = document.querySelector('input[inputmode="numeric"]');
-    const incBtn = document.querySelector('div[role="button"]');
+    const inputElement = getByTestId('test-input');
 
-    expect(inputElement).toBeTruthy();
-    expect(incBtn).toBeTruthy();
+    expect(inputElement).toBeInTheDocument();
 
-    ReactDOM.unmountComponentAtNode(container);
-    container.remove();
+    unmount();
   });
   it('call the callback functions', () => {
-    // setup after the testing library is merged
+    const handleChange = jest.fn();
+    const component = (
+      <NumberInput>
+        <NumberInputField data-testid="test-input" onChange={handleChange} />
+        <NumberInputStepper>
+          <NumberIncrementStepper />
+          <NumberDecrementStepper />
+        </NumberInputStepper>
+      </NumberInput>
+    );
+
+    const { getByTestId, unmount } = render(component);
+
+    const inputElement = getByTestId('test-input') as HTMLInputElement;
+
+    fireEvent.change(inputElement, { target: { value: '23' } });
+
+    expect(handleChange).toBeCalledTimes(1);
+    expect(inputElement.value).toBe('23');
+
+    unmount();
   });
 });
