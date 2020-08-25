@@ -51,6 +51,7 @@ export {
   VStack,
   Wrap,
 } from './components/layout';
+export { Textarea } from './components/textarea';
 export {
   ThemeProvider,
   ThemeProviderProps,
