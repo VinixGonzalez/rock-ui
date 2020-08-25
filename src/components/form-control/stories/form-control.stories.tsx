@@ -17,7 +17,7 @@ export default {
 export const basic = () => (
   <FormControl id="email">
     <FormLabel>Email address</FormLabel>
-    <Input type="email" />
+    <Input type="email" placeholder="email@example.com" />
     <FormHelperText>We'll never share your email.</FormHelperText>
   </FormControl>
 );
