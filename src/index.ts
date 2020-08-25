@@ -51,6 +51,7 @@ export {
   VStack,
   Wrap,
 } from './components/layout';
+export { NativeSelect } from './components/select';
 export {
   ThemeProvider,
   ThemeProviderProps,
