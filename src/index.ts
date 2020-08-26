@@ -52,6 +52,12 @@ export {
   Wrap,
 } from './components/layout';
 export {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+  FormLabel,
+} from './components/form-control';
+export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
