@@ -70,7 +70,8 @@
     "@chakra-ui/system": "^1.0.0-rc.2",
     "@chakra-ui/theme": "^1.0.0-rc.2",
     "@chakra-ui/theme-tools": "^1.0.0-rc.2",
-    "@types/react-select": "^3.0.19"
+    "@types/react-select": "^3.0.19",
+    "react-select": "^3.1.0"
   },
   "repository": {
     "type": "git",
