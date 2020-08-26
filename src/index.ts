@@ -67,6 +67,12 @@ export {
   NumberIncrementStepper,
 } from './components/number-input';
 export {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+  FormLabel,
+} from './components/form-control';
+export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
