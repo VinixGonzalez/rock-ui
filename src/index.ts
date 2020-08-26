@@ -1,5 +1,6 @@
-export { Button } from './components/button';
+export { Avatar, AvatarBadge, AvatarGroup } from './components/avatar';
 export { Badge } from './components/badge';
+export { Button } from './components/button';
 export {
   Alert,
   AlertIcon,
@@ -22,6 +23,7 @@ export {
   MenuList,
   MenuOptionGroup,
 } from './components/menu';
+export { Progress } from './components/progress';
 export {
   Modal,
   ModalOverlay,
@@ -33,6 +35,29 @@ export {
 } from './components/modal';
 export { useDisclosure } from '@chakra-ui/core';
 export { Tooltip } from './components/tooltip';
+export {
+  AspectRatio,
+  Box,
+  Center,
+  Circle,
+  Container,
+  Flex,
+  Grid,
+  HStack,
+  SimpleGrid,
+  Spacer,
+  Square,
+  Stack,
+  StackDivider,
+  VStack,
+  Wrap,
+} from './components/layout';
+export {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+  FormLabel,
+} from './components/form-control';
 export {
   ThemeProvider,
   ThemeProviderProps,

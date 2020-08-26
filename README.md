@@ -86,3 +86,8 @@ Per Palmer Group guidelines, [always use named exports.](https://github.com/palm
 ## Publishing to NPM
 
 We use https://github.com/sindresorhus/np to publish to NPM
+
+## Known Issues
+
+1. The progress component preview doesn't seem to work in the official docs examples
+https://next.chakra-ui.com/docs/components/progress however, it works fine for us.
