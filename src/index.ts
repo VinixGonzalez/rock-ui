@@ -37,6 +37,29 @@ export { Checkbox, CheckboxGroup } from './components/checkbox';
 export { Radio, RadioGroup, useRadio, useRadioGroup } from './components/radio';
 export { useDisclosure } from '@chakra-ui/core';
 export {
+  AspectRatio,
+  Box,
+  Center,
+  Circle,
+  Container,
+  Flex,
+  Grid,
+  HStack,
+  SimpleGrid,
+  Spacer,
+  Square,
+  Stack,
+  StackDivider,
+  VStack,
+  Wrap,
+} from './components/layout';
+export {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+  FormLabel,
+} from './components/form-control';
+export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
