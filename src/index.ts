@@ -53,6 +53,12 @@ export {
 } from './components/layout';
 export { Textarea } from './components/textarea';
 export {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+  FormLabel,
+} from './components/form-control';
+export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
