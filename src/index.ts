@@ -53,6 +53,12 @@ export {
 } from './components/layout';
 export { NativeSelect } from './components/select';
 export {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+  FormLabel,
+} from './components/form-control';
+export {
   ThemeProvider,
   ThemeProviderProps,
   CSSReset,
