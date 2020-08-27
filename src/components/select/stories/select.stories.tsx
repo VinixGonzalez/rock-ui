@@ -41,7 +41,6 @@ export const Basic = () => {
     <React.Fragment>
       <Select
         classNamePrefix="select"
-        defaultMenuIsOpen
         defaultValue={colourOptions[0]}
         isDisabled={state.isDisabled}
         isLoading={state.isLoading}
