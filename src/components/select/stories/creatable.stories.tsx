@@ -25,6 +25,10 @@ const defaultOptions = [
   createOption('Three'),
 ];
 
+const components = {
+  DropdownIndicator: null,
+};
+
 export const basic = () => {
   return (
     <>
@@ -72,6 +76,48 @@ export const HandleOptionCreate = () => {
       onChange={handleChange}
       onCreateOption={handleCreate}
       options={state.options}
+      value={state.value}
+    />
+  );
+};
+
+export const MultiSelectTextInput = () => {
+  const [state, setState] = React.useState({
+    inputValue: '',
+    value: [],
+  });
+
+  const handleChange = (value: any) => {
+    setState({ ...state, value });
+  };
+  const handleInputChange = (inputValue: string) => {
+    setState({ ...state, inputValue });
+  };
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
+    const { inputValue, value } = state;
+    if (!inputValue) return;
+    switch (event.key) {
+      case 'Enter':
+      case 'Tab':
+        setState({
+          inputValue: '',
+          value: [...value, createOption(inputValue)],
+        });
+        event.preventDefault();
+    }
+  };
+
+  return (
+    <CreatableSelect
+      components={components}
+      inputValue={state.inputValue}
+      isClearable
+      isMulti
+      menuIsOpen={false}
+      onChange={handleChange}
+      onInputChange={handleInputChange}
+      onKeyDown={handleKeyDown}
+      placeholder="Type something and press enter..."
       value={state.value}
     />
   );

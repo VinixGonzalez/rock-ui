@@ -51,7 +51,13 @@ export {
   VStack,
   Wrap,
 } from './components/layout';
-export { NativeSelect, Select, AsyncSelect } from './components/select';
+export {
+  NativeSelect,
+  Select,
+  AsyncSelect,
+  AsyncCreatableSelect,
+  CreatableSelect,
+} from './components/select';
 export {
   FormControl,
   FormErrorMessage,
