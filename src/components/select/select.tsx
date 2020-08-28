@@ -1,9 +1,11 @@
 import React, { FC } from 'react';
-import BaseSelect from 'react-select';
+import BaseSelect, { Props } from 'react-select';
 import makeAnimated from 'react-select/animated';
 
-export const Select: FC = ({ children, ...props }) => (
-  <BaseSelect {...props}>{children}</BaseSelect>
-);
+interface SelectProps extends Props {
+  components?: any;
+}
 
-export { makeAnimated };
+export const Select: FC<SelectProps> = props => <BaseSelect {...props} />;
+
+export { makeAnimated, SelectProps };

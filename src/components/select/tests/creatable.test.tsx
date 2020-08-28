@@ -1,8 +1,8 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { CreatableSelect } from '../';
-// import { colourOptions } from '../constants';
+import { colourOptions } from '../constants';
 
 describe('Creatable Select', () => {
   it('renders without crashing', () => {
@@ -16,16 +16,37 @@ describe('Creatable Select', () => {
 
     unmount();
   });
-  // it('calls the callback functions', () => {
-  //   const handleLoad = jest.fn();
-  //   const component = (
-  //     <CreatableSelect options={colourOptions} />
-  //   );
-  //
-  //   const { unmount } = render(component);
-  //
-  //   expect(handleLoad).toBeCalledTimes(1);
-  //
-  //   unmount();
-  // });
+  it('calls the callback functions', () => {
+    const handleChange = jest.fn();
+    const handleCreate = jest.fn();
+    const component = (
+      <CreatableSelect
+        options={colourOptions}
+        defaultMenuIsOpen
+        defaultInputValue="testvalue"
+        onCreateOption={handleCreate}
+        onChange={handleChange}
+      />
+    );
+
+    const utils = render(component);
+
+    const input = utils.getByDisplayValue('testvalue') as HTMLInputElement;
+
+    expect(input).toBeInTheDocument();
+
+    fireEvent.change(input, { target: { value: 'anothervalue' } });
+
+    expect(input.value).toBe('anothervalue');
+
+    const createNewOptionButton = utils.getByText('Create "anothervalue"');
+
+    expect(createNewOptionButton).toBeInTheDocument();
+
+    fireEvent.click(createNewOptionButton);
+
+    expect(handleCreate).toBeCalledTimes(1);
+
+    utils.unmount();
+  });
 });

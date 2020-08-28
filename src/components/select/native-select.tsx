@@ -4,8 +4,12 @@ import {
   SelectProps as BaseSelectProps,
 } from '@chakra-ui/core';
 
-export { BaseSelectProps as NativeSelectProps };
+interface NativeSelectProps extends BaseSelectProps {
+  iconSize?: number | string;
+}
 
-export const NativeSelect: FC<BaseSelectProps> = ({ children, ...props }) => (
+export { NativeSelectProps };
+
+export const NativeSelect: FC<NativeSelectProps> = ({ children, ...props }) => (
   <BaseSelect {...props}>{children}</BaseSelect>
 );

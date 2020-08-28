@@ -47,12 +47,25 @@ export const multi = () => {
   );
 };
 
+type valueType = {
+  label: string;
+  value: string;
+};
+
+interface StateInterface {
+  isLoading?: boolean;
+  options: valueType[];
+  value?: valueType;
+}
+
+const initialState: StateInterface = {
+  isLoading: false,
+  options: defaultOptions,
+  value: undefined,
+};
+
 export const HandleOptionCreate = () => {
-  const [state, setState] = React.useState({
-    isLoading: false,
-    options: defaultOptions,
-    value: {},
-  });
+  const [state, setState] = React.useState(initialState);
   const handleChange = (newValue: any) => {
     setState({ ...state, value: newValue });
   };
@@ -71,6 +84,8 @@ export const HandleOptionCreate = () => {
   return (
     <CreatableSelect
       isClearable
+      defaultMenuIsOpen
+      defaultInputValue="asdf"
       isDisabled={state.isLoading}
       isLoading={state.isLoading}
       onChange={handleChange}
@@ -84,7 +99,7 @@ export const HandleOptionCreate = () => {
 export const MultiSelectTextInput = () => {
   const [state, setState] = React.useState({
     inputValue: '',
-    value: [],
+    value: [] as valueType[],
   });
 
   const handleChange = (value: any) => {
