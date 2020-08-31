@@ -54,6 +54,21 @@ export {
 } from './components/layout';
 export { Textarea } from './components/textarea';
 export {
+  Input,
+  InputGroup,
+  InputLeftAddon,
+  InputLeftElement,
+  InputRightAddon,
+  InputRightElement,
+} from './components/input';
+export {
+  NumberInput,
+  NumberDecrementStepper,
+  NumberInputStepper,
+  NumberInputField,
+  NumberIncrementStepper,
+} from './components/number-input';
+export {
   FormControl,
   FormErrorMessage,
   FormHelperText,
