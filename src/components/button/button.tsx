@@ -6,6 +6,10 @@ import {
 
 export { BaseButtonProps as ButtonProps };
 
-export const Button: FC<BaseButtonProps> = ({ children, ...props }) => (
-  <BaseButton {...props}>{children}</BaseButton>
+export const Button: FC<BaseButtonProps> = React.forwardRef(
+  ({ children, ...props }, ref) => (
+    <BaseButton {...props} ref={ref}>
+      {children}
+    </BaseButton>
+  )
 );
