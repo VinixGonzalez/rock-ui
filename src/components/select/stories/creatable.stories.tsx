@@ -84,8 +84,6 @@ export const HandleOptionCreate = () => {
   return (
     <CreatableSelect
       isClearable
-      defaultMenuIsOpen
-      defaultInputValue="asdf"
       isDisabled={state.isLoading}
       isLoading={state.isLoading}
       onChange={handleChange}

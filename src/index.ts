@@ -57,6 +57,7 @@ export {
   AsyncSelect,
   AsyncCreatableSelect,
   CreatableSelect,
+  defaultSelectComponents,
 } from './components/select';
 export {
   FormControl,

@@ -1,0 +1,22 @@
+.rock-overwrite-defaults .rock__control,
+.rock-overwrite-defaults .select__control {
+    border-color: rgb(226, 232, 240);
+}
+.rock-overwrite-defaults .rock__single-value,
+.rock-overwrite-defaults .select__single-value,
+.rock-overwrite-defaults .rock__placeholder,
+.rock-overwrite-defaults .select__placeholder,
+.rock-overwrite-defaults .rock__multi-value__label,
+.rock-overwrite-defaults .select__multi-value__label {
+    color: rgb(26, 32, 44);
+}
+
+.rock-overwrite-defaults .rock__value-container,
+.rock-overwrite-defaults .select__value-container {
+    padding-left: 1rem;
+}
+
+.rock-overwrite-defaults .rock__indicators,
+.rock-overwrite-defaults .select__indicators {
+    padding-right: 12px;
+}
