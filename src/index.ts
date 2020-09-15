@@ -80,3 +80,4 @@ export {
   CSSReset,
   RockUITheme,
 } from './system/theme';
+export { COLORS } from './constants/colors/colors';
